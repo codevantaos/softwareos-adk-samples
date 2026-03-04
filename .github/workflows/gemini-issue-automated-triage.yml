@@ -56,7 +56,7 @@ jobs:
           private-key: '${{ secrets.APP_PRIVATE_KEY }}'
 
       - name: 'Run Gemini Issue Triage'
-        uses: 'google-github-actions/run-gemini-cli@v0'
+        uses: 'google-github-actions/run-gemini-cli@f4d3032cb4934a2b0fb8a4c40bc03b86aded2af0' # ratchet:google-github-actions/run-gemini-cli@v0
         id: 'gemini_issue_triage'
         env:
           GITHUB_TOKEN: '${{ steps.generate_token.outputs.token || secrets.GITHUB_TOKEN }}'
